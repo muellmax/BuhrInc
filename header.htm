@@ -1,0 +1,77 @@
+<!--     BEGIN HEADER.HTM FILE       -->
+<!-- Set the doctype for this document. -->
+	<!DOCTYPE html>
+<!-- Set the html name space and language attributes. -->
+	<html xmlns="http://www.w3.org/1999/xhtml">
+<!--Start the head section. -->
+	<head>
+	<?php $sitepath="http://people.oregonstate.edu/~muellmax/buhrinc/"; ?>
+	<?php $sitename="BuhrInc"; ?>
+	<?php $sitedescription="This site will be used by the client to help promote his art work. He eventually wants to sell his current artwork online, as well as doing custom orders for buyers spread out over the country."; ?>
+		<!-- Define the meta tags: -->
+			<meta charset="UTF-8" />  <!-- This line goes before all others so the browser can read the character set of the elements below. -->
+			<meta name="Keywords" content="Buhr, toilet art, bathroom art, modern art, primitave modernism, springfield OR, brown and yellow, Cowboy Art, Outsider art, Boom, wavy lines, chasing shadows, George Lucas, Brown and blue, Green and Yellow, bright light, creud art, Rockport Texas, mixed media art, gobbledegook" />
+			<meta name="Description" content="<?php echo $sitedescription; ?>" />
+			<meta name="Author" content="Max Mueller" />
+			<meta name="Copyright" content="2010" />
+			<meta name="Rating" content="General" />
+			<meta name="robots" content="noindex, nofollow, noarchive" />
+		<title><?php echo $pagetitle ?> ~ <?php echo $sitename ?> ~ <?php echo $sitedescription ?></title>
+	<!-- Title the document using the page, site name, and description variables. This information shows in a browser's title bar of each window and tab. -->
+		<link href="<?php echo $sitepath; ?>screen.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="<?php echo $sitepath; ?>print.css" rel="stylesheet" type="text/css" media="print" />
+		<link href="<?php echo $sitepath; ?>handheld.css" rel="stylesheet" type="text/css" media="handheld" />
+	<!-- Get the external screen and print style sheets. -->
+	<!-- Use a conditional statement that helps IE  understand the html 5 code and PNG transparency
+    REFERENCE http://code.google.com/p/ie7-js/ 
+	http://code.google.com/p/html5shiv/
+    -->
+        <!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!--[if lt IE 9]>
+			<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+		<![endif]-->
+    </head>
+	
+	<body>
+	<section>
+		<div id="wrapper">
+			<nav id="toolrow">
+				<ul class="toolbar">
+					<li><a href="#content" title="Skip navigation">&darr;</a></li>
+					<li><a href="<?php echo $sitepath; ?>contact/index.php" title="Contact Us">Contact Us</a></li>
+					<li><a href="<?php echo $sitepath; ?>registration/index.php" title="Registration">Registration</a></li>
+					<li><a href="<?php echo $sitepath; ?>login/index.php" title="Login/Logout">Login/Logout</a></li>
+					<li><a href="<?php echo $sitepath; ?>help/index.php" title="Help">Help</a></li>
+					<li><a href="<?php echo $sitepath; ?>index.php" title="Home">Home</a></li>
+				</ul>
+			</nav>
+			
+		<header>
+			<a href="<?php echo $sitepath; ?>"><img src="<?php echo $sitepath; ?>images/banner.gif" alt="<?php echo $sitename . $sitedescription ?>" /></a>
+			<!--<a href="<?php echo $sitepath; ?>index.php" ><img src="<?php echo $sitepath; ?>images/newmonkeylogo2.GIF" alt="<?php echo $sitedescription ?>" /></a>-->
+		</header>
+		
+			<nav id="leftcolumn">
+				<ul class="mainmenu">
+					<li><a href="<?php echo $sitepath; ?>galleries/index.php" title="Galleries">Galleries</a></li>
+					<li><a href="<?php echo $sitepath; ?>news/index.php" title="News">News</a></li>
+					<li><a href="<?php echo $sitepath; ?>events/index.php" title="Special Events">Special Events</a></li>
+					<li><a href="<?php echo $sitepath; ?>about/index.php" title="About BuhrInc">About BuhrInc</a></li>
+					<li><a href="#" onclick = "window.print()" title="Print">print</a></li>
+				</ul>
+			</nav>
+			
+			<nav id="rightcolumn">
+				<ul class="mainmenu">
+					<li><a href="<?php echo $sitepath; ?>storefront/index.php" title="Storefront">Storefront</a></li>
+					<li><a href="<?php echo $sitepath; ?>specialorders/index.php" title="Special Orders">Special Orders</a></li>
+					<li><a href="<?php echo $sitepath; ?>donate/index.php" title="Donate">Donate</a></li>
+				</ul>
+					<img src="http://people.oregonstate.edu/~muellmax/buhrinc/images/toiletmodernart.PNG" alt = "Toilet minimalist modern art." />
+			</nav>
+		<article id="content">
+		<h2><b><?php echo $pagetitle ?></b></h2>
+        
