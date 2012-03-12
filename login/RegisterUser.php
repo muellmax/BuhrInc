@@ -1,6 +1,8 @@
 <?php
 ob_start();
-session_start(); 
+
+if (session_id() == "")
+	session_start(); 
 
 $dbuser = 'forells-db';
 $dbpass = 'hvG5g5XxQUGSCdZP';
@@ -39,12 +41,12 @@ $_SESSION['user'] = $id;
 
 //echo $Uname;
 //echo $Pword;
-//echo $_SESSION['user'];
+echo $_SESSION['user'];
 
 
 header('Location:http://people.oregonstate.edu/~muellmax/buhrinc/login/index.php');
 
 
-ob_flush();
+//ob_flush();
 mysql_close($mysql_handle);
 ?>

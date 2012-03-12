@@ -13,7 +13,7 @@
 		<input type='submit' name='Submit' value='Submit' />
 	</fieldset>
 </form>
-
+<p><?php echo $_SESSION['user']; ?>hello</p>
 <?php
 
 if (isset($_SESSION['user'])) {
