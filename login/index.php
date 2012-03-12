@@ -1,7 +1,8 @@
 <?php $pagetitle="Login/Logout"; ?>
 <?php include '../header.htm' ?>
 
-<form id='login' action='login.php' method='post' accept-charset='UTF-8'>
+
+<form id='RegisterUser' action='RegisterUser.php' method='post' accept-charset='UTF-8'>
 	<fieldset>
 		<legend>Login</legend>
 		<input type='hidden' name='submitted' id='submitted' value='1' />
@@ -12,5 +13,17 @@
 		<input type='submit' name='Submit' value='Submit' />
 	</fieldset>
 </form>
+<p><?php echo $_SESSION['user']; ?>hello</p>
+<?php
 
-<?php include '../footer.htm' ?>
+if (isset($_SESSION['user'])) {
+	echo "<p>test</p>";
+	if ($_SESSION['user'] == -1) 
+		echo "<p>Please enter a valid username and password</p>";
+	else 
+		echo "<p>You have successfully logged in.</p>";
+}
+
+
+include '../footer.htm'; 
+?>
