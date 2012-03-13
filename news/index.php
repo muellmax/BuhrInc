@@ -23,11 +23,7 @@
 	$result = mysql_query($sql);
 	
 	echo 
-	"<table>
-		<tr>
-			<th>Picture</th>
-			<th>Message</th>
-		<tr>";
+	"<table background-color:#C27E3A>";
 	while($row = mysql_fetch_array($result)) {
 		echo "<tr>";
 		echo "<td><img src=" . $row['link'] . " height='100'/></td>";
