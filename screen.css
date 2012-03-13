@@ -38,7 +38,7 @@ article {
 	width:500px;
 	background-color: #C27E3A;
 	overflow-y: auto;
-	overflow-x: hidden;
+	overflow-x: auto;
 }
 footer {
 	margin:0; 
