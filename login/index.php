@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php $pagetitle="Login/Logout"; ?>
 <?php include '../header.htm' ?>
 
@@ -13,11 +14,9 @@
 		<input type='submit' name='Submit' value='Submit' />
 	</fieldset>
 </form>
-<p><?php echo $_SESSION['user']; ?>hello</p>
 <?php
 
 if (isset($_SESSION['user'])) {
-	echo "<p>test</p>";
 	if ($_SESSION['user'] == -1) 
 		echo "<p>Please enter a valid username and password</p>";
 	else 
