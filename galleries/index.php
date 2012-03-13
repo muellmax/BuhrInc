@@ -4,6 +4,8 @@
 	include '../header.htm';
 	include '../connection.php';
 
+	$userID = $_SESSION['user'];
+
 	$query = "select * from Art";
 	$result = mysql_query ($query);
 ?>
@@ -46,9 +48,9 @@
 		} else { // for sale; click on the image to purchase
 			$info = $info . "\nPrice: $" . $obj->Price;
 ?>
-		<li><a href="purchase.php?user_id=&art_id=<?php print($obj->Art_ID);?>"><img src="<?php print($obj->Link);?>" title="<?php echo $info;?>" /></a>
+		<li><a href="purchase.php?art_id=<?php print($obj->Art_ID);?>"><img src="<?php print($obj->Link);?>" title="<?php echo $info;?>" /></a>
 			<ul>
-				<li><?php print($obj->Description); print("\n(Click to purchase)");?></li>
+				<li><?php print($obj->Description . "\n(Click to purchase)"); ?></li>
 			</ul>
 		</li>
 <?php

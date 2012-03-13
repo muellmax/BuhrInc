@@ -1,17 +1,22 @@
-<?php $pagetitle="Shipping and Payment"; ?>
+<?php
+	$pagetitle="Shipping and Payment"; 
+
+	session_start();
+	$userID = $_SESSION['user'];
+?>
 
 <?php
 	include '../header.htm';
 	include '../connection.php';
 
 	// retrieve form parameters
-	$user_id = trim ($_GET["user_id"]);
 	$art_id = trim ($_GET["art_id"]);
 
 	$query = "select * from Art where Art_ID='" . $art_id . "'";
 	$result = mysql_query ($query);
 ?>
 
+<form name="payment" action="purchase_action.php" method="get">
 <p>
 	<b>Order</b><br/>
 	<table border="1">
@@ -48,22 +53,22 @@
 	<b>Shipping adress</b><br/>
 	<table border="1" style="font-family:arial;font-size:10px;">
 		<tr>
-			<td align="right">Full Name:</td><td><input type="text" name="fname" /></td>
+			<td align="right">Address line 1:</td><td><input type="text" name="Address_Line_1" size="50" />
+			<font style="color:red;">*</font>
+			<br/><i>Street address, P.O. box, company name, c/o</i></td>
 		</tr>
 		<tr>
-			<td align="right">Address line 1:</td><td><input type="text" name="Address_Line_1" size="50" /><br/><i>Street address, P.O. box, company name, c/o</i></td>
+			<td align="right">Address line 2:</td><td><input type="text" name="Address_Line_2" size="50" />
+			<br/><i>Apartment, suite, unit, building, floor, etc.</i></td>
 		</tr>
 		<tr>
-			<td align="right">Address line 2:</td><td><input type="text" name="Address_Line_2" size="50" /><br/><i>Apartment, suite, unit, building, floor, etc.</i></td>
+			<td align="right">City:</td><td><input type="text" name="City" /><font style="color:red;">*</font></td>
 		</tr>
 		<tr>
-			<td align="right">City:</td><td><input type="text" name="City" /></td>
+			<td align="right">State/Province/Region:</td><td><input type="text" name="State" /><font style="color:red;">*</font></td>
 		</tr>
 		<tr>
-			<td align="right">State/Province/Region:</td><td><input type="text" name="State" /></td>
-		</tr>
-		<tr>
-			<td align="right">Zip:</td><td><input type="text" name="Zip" maxlength="5" size="5" /></td>
+			<td align="right">Zip:</td><td><input type="text" name="Zip" maxlength="5" size="5" /><font style="color:red;">*</font></td>
 		</tr>
 	</table>
 	<font style="font-family:arial;color:red;font-size:14px;text-decoration:underline;"><b>Address Accuracy:</b></font>
@@ -76,23 +81,28 @@
 	<b>Payment option</b><br/>
 	<table border="1">
 		<tr>
-			<td align="right">Card type:</td><td><input type="text" name="Card_Type" /></td>
+			<td align="right">Card type:</td><td><input type="text" name="Card_Type" /><font style="color:red;">*</font></td>
 		</tr>
 		<tr>
-			<td align="right">Card number:</td><td><input type="text" name="Card_Number" /></td>
+			<td align="right">Card number:</td><td><input type="text" name="Card_Number" /><font style="color:red;">*</font></td>
 		</tr>
 		<tr>
-			<td align="right">Name on card:</td><td><input type="text" name="Name_On_Card" /></td>
+			<td align="right">Name on card:</td><td><input type="text" name="Name_On_Card" /><font style="color:red;">*</font></td>
 		</tr>
 		<tr>
-			<td align="right">Expiration date:</td><td><input type="text" name="Card_Exp_Date" /></td>
+			<td align="right">Expiration date:</td><td><input type="text" name="Card_Exp_Date" /><font style="color:red;">*</font></td>
 		</tr>
 		<tr>
-			<td align="right">Security code:</td><td><input type="text" name="Security_Code" maxlength="3" size="3" /></td>
+			<td align="right">Security code:</td><td><input type="text" name="Security_Code" maxlength="3" size="3" /><font style="color:red;">*</font></td>
 		</tr>
 	</table>
 </p>
 
-<?php print($art_id); ?>
+<input type="hidden" value="<?php echo $userID; ?>" name="User_ID" />
+<input type="hidden" value="<?php echo $art_id; ?>" name="Art_ID" />
+<input type="hidden" value="<?php echo $dTotal; ?>" name="Total" />
+
+<input type="submit" name="cmd" value="Insert" />
+</form>
 
 <?php include '../footer.htm' ?>
