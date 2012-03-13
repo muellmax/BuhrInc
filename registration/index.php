@@ -1,4 +1,4 @@
-<?php $pagetitle="Register"; ?>
+<?php $pagetitle="Register"; session_start(); ?>
 <?php include '../header.htm' ?>
 
 <p>Please register for an account and have access to everything Buhrinc has to offer.</p>
@@ -20,7 +20,12 @@
 		<input type='submit' name='Submit' value='Submit' />
 	</fieldset>
 	
-	
+	<?php
+		if ($_SESSION['userdup'] == 1) {
+			echo "<p>That user name is already in use.</p>";	
+			$_SESSION['userdup'] == 0;
+		}
+	?>
 	
 </form>
 

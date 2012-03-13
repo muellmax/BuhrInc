@@ -34,9 +34,11 @@ article {
 	margin:0 202px; 
 	border:1px solid #330000; 
 	padding:0; 
-	min-height:492px;
+	height:492px;
 	width:500px;
 	background-color: #C27E3A;
+	overflow-y: auto;
+	overflow-x: auto;
 }
 footer {
 	margin:0; 
@@ -141,7 +143,7 @@ table {
 	border-collapse: collapse;
 	font-size: 11px;
 	margin: 0 0 0 0px;
-	color: #330000;
+	color: #000000;
 }
 caption {
 	caption-side: top;
@@ -154,9 +156,10 @@ caption {
 tr, th, td {
 	border-bottom: 3px ridge #000000;
 	padding: 5px;
-	color: #330000;
+	color: #000000;
+	font-size: 16px;
 }
-th, td {border-right: 2px dotted #330000;}
+th, td {border-right: 2px dotted #000000;}
 th {text-align: right; font-size: 12px;}
 th:last-child, td:last-child {border-right:0;}
 tr:nth-child(odd) {}
@@ -285,7 +288,7 @@ ul.gallery {
 }
 ul.gallery li {
 	display: block;
-	float: right;
+	float: left;
 	padding: 5px;
 	text-align: center;
 	width: 151px;
@@ -313,15 +316,15 @@ ul.gallery li a img {
 	padding: 0 0 0 0;
 }
 ul.gallery li:hover a img {
-	width: 300px;
+	/*width: 300px;
 	position: relative;
 	z-index:300;
 	border: 0;
 	margin: 0;
 	padding: 0;
-	background-color: #FFF;
+	background-color: #FFF;*/
 }
-ul.gallery li:hover ul li {display: none;}
+/*ul.gallery li:hover ul li {display: none;}*/
 
 .boxright {}
 .boxleft {}
