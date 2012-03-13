@@ -141,7 +141,7 @@ table {
 	border-collapse: collapse;
 	font-size: 11px;
 	margin: 0 0 0 0px;
-	color: #330000;
+	color: #000000;
 }
 caption {
 	caption-side: top;
@@ -154,9 +154,9 @@ caption {
 tr, th, td {
 	border-bottom: 3px ridge #000000;
 	padding: 5px;
-	color: #330000;
+	color: #000000;
 }
-th, td {border-right: 2px dotted #330000;}
+th, td {border-right: 2px dotted #000000;}
 th {text-align: right; font-size: 12px;}
 th:last-child, td:last-child {border-right:0;}
 tr:nth-child(odd) {}
