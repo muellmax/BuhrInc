@@ -18,7 +18,6 @@ $dbc = @mysql_connect (DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 mysql_select_db(DB_NAME, $dbc);
 
 session_start();
-
 $userid = $_SESSION['user'];
 $subject = $_POST["subject"];
 $message = $_POST["message"];
@@ -28,11 +27,8 @@ $sql = "insert into Email
 		values
 		(NOW(), '" . $subject . "','" . $message . "', 0, " . $userid . ")";
 		
-echo $sql;
-
 mysql_query($sql);
-
-mysql_close($con);
+mysql_close($con);]
 
 ?>
  

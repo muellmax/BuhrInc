@@ -2,9 +2,8 @@
 <?php include '../header.htm' ?>
 
 <form action="sent.php" method="post" >
-    <input type="hidden" name="recipient" value="forells@onid.orst.edu" />
     <input type="hidden" name="message" value="message" />
-    <input type="hidden" name="subject" value="[CNS] note" />
+    <input type="hidden" name="subject" value="subject" />
     <input type="hidden" name="redirect" value="../sent.php" />
 	
 	<!--- instruction section --->
@@ -14,10 +13,10 @@
 	</fieldset>
 	
 	<!-- drop down list for subject -->
-	<fieldset class="fieldsetfloat">
-		<legend>General <span class="bold" ></span>topic of message.*</legend>
-		<select name="topics" id="topics" accesskey="t" tabindex="5" />
-			<option>Other</option>
+	<fieldset  class="fieldsetfloat">
+		<legend><span class="bold" ></span>General topic of message.</legend>
+		<select  name="subject" id="subject" accesskey="t" tabindex="5" />
+			<option value="other">Other</option>
 			<option value="question">Question</option>
 			<option value="comment">Comment</option>
 			<option value="status">Status of Order</option>
