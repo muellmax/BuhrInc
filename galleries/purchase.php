@@ -9,6 +9,11 @@
 	include '../header.htm';
 	include '../connection.php';
 
+	if (is_null($userid)) {
+		echo "Please login before making an order!";
+	}
+	else {
+
 	// retrieve form parameters
 	$art_id = trim ($_GET["art_id"]);
 
@@ -105,4 +110,4 @@
 <input type="submit" name="cmd" value="Insert" />
 </form>
 
-<?php include '../footer.htm' ?>
+<?php include '../footer.htm';} ?>
