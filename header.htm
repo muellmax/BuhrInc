@@ -2,13 +2,15 @@
 <!-- Set the doctype for this document. -->
 	<!DOCTYPE html>
 <!-- Set the html name space and language attributes. -->
-	
+
 	<html xmlns="http://www.w3.org/1999/xhtml">
 <!--Start the head section. -->
 	<head>
-	<?php $sitepath="http://people.oregonstate.edu/~muellmax/buhrinc/"; ?>
-	<?php $sitename="BuhrInc"; ?>
-	<?php $sitedescription="This site will be used by the client to help promote his art work. He eventually wants to sell his current artwork online, as well as doing custom orders for buyers spread out over the country."; ?>
+	<?php
+		$sitepath = "http://people.oregonstate.edu/~muellmax/buhrinc/";
+		$sitename = "BuhrInc";
+		$sitedescription = "This site will be used by the client to help promote his art work. He eventually wants to sell his current artwork online, as well as doing custom orders for buyers spread out over the country.";
+	?>
 		<!-- Define the meta tags: -->
 			<meta charset="UTF-8" />  <!-- This line goes before all others so the browser can read the character set of the elements below. -->
 			<meta name="Keywords" content="Buhr, toilet art, bathroom art, modern art, primitave modernism, springfield OR, brown and yellow, Cowboy Art, Outsider art, Boom, wavy lines, chasing shadows, George Lucas, Brown and blue, Green and Yellow, bright light, creud art, Rockport Texas, mixed media art, gobbledegook" />
@@ -35,7 +37,7 @@
 			<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
 		<![endif]-->
     </head>
-	
+
 	<body>
 	<section>
 		<div id="wrapper">
@@ -49,12 +51,12 @@
 					<li><a href="<?php echo $sitepath; ?>index.php" title="Home">Home</a></li>
 				</ul>
 			</nav>
-			
+
 		<header>
 			<!--<a href="<?php echo $sitepath; ?>"><img src="<?php echo $sitepath; ?>images/banner.gif" alt="<?php echo $sitename . $sitedescription ?>" /></a>-->
 			<a href="<?php echo $sitepath; ?>index.php" ><img src="<?php echo $sitepath; ?>images/newmonkeylogo2.GIF" alt="<?php echo $sitedescription ?>" /></a>
 		</header>
-		
+
 			<nav id="leftcolumn">
 				<ul class="mainmenu">
 					<li><a href="<?php echo $sitepath; ?>galleries/index.php" title="Galleries">Galleries</a></li>
@@ -64,7 +66,7 @@
 					<li><a href="#" onclick = "window.print()" title="Print">print</a></li>
 				</ul>
 			</nav>
-			
+
 			<nav id="rightcolumn">
 				<ul class="mainmenu">
 					<!--<li><a href="<?php echo $sitepath; ?>storefront/index.php" title="Storefront">Storefront</a></li>
@@ -75,4 +77,3 @@
 			</nav>
 		<article id="content">
 		<h2><b><?php echo $pagetitle ?></b></h2>
-        

@@ -1,5 +1,8 @@
-<?php $pagetitle="Contact Max"; ?>
-<?php include '../header.htm' ?>
+<?php
+	$pagetitle = "Contact Max";
+
+	include '../header.htm';
+?>
 
 <p>Follow instruction below to contact the creators of this site.</p>
 

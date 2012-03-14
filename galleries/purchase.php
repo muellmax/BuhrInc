@@ -1,11 +1,9 @@
 <?php
-	$pagetitle="Shipping and Payment"; 
+	$pagetitle = "Shipping and Payment"; 
 
 	session_start();
 	$userID = $_SESSION['user'];
-?>
 
-<?php
 	include '../header.htm';
 	include '../connection.php';
 

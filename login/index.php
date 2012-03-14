@@ -1,7 +1,8 @@
-<?php session_start(); ?>
-<?php $pagetitle="Login/Logout"; ?>
-<?php include '../header.htm' ?>
-
+<?php
+	session_start();
+	$pagetitle = "Login/Logout";
+	include '../header.htm';
+?>
 
 <form id='RegisterUser' action='RegisterUser.php' method='post' accept-charset='UTF-8'>
 	<fieldset>
@@ -14,15 +15,14 @@
 		<input type='submit' name='Submit' value='Submit' />
 	</fieldset>
 </form>
-<?php
 
+<?php
 if (isset($_SESSION['user'])) {
 	if ($_SESSION['user'] == -1) 
 		echo "<p>Please enter a valid username and password</p>";
 	else 
 		echo "<p>You have successfully logged in.</p>";
 }
-
 
 include '../footer.htm'; 
 ?>
