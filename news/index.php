@@ -19,11 +19,5 @@
 		echo "</tr>";
 	}
 	echo "</table>";
-<<<<<<< HEAD
-	mysql_close($dbc);
-?>
-=======
->>>>>>> e8e334a8a80b8226b81f613739a087df2a69d21a
-
 	include '../footer.htm';
 ?>
