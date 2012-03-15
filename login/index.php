@@ -18,12 +18,13 @@
 
 <?php
 if (isset($_SESSION['user'])) {
-	if ($_SESSION['user'] == -1) 
+	if ($_SESSION['user'] == -1) {
 		echo "<p>Please enter a valid username and password</p>";
-	else 
-		echo "<p>You have successfully logged in.</p>";
+	}
+	//else 
+	//	header ('Location:http://people.oregonstate.edu/~muellmax/buhrinc/index.php');
 }
 
 include '../footer.htm'; 
-mysql_close($mysql_handle);
+
 ?>

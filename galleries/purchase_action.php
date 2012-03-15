@@ -80,11 +80,11 @@
 		case "Insert":
 			// insert into Shipping_Address
 			$query = "insert into Shipping_Address( User_ID, Address_Line_1, Address_Line_2, City, State, Zip ) ";
-			$query .= "values( $User_ID, '$Address_Line_1', '$Address_Line_2', '$City', '$State', $Zip )";
+			$query .= "values( $User_ID, '$Address_Line_1', '$Address_Line_2', '$City', '$State', '$Zip' )";
 
 			$result = mysql_query ($query); // execute SQL statement
 			if (!$result) {
-				die ('Insert Row Failed!' . mysql_error());
+				die ('Insert Row Failed at shipping!' . mysql_error());
 			}
 
 			// get the id of the record that has just been inserted
@@ -96,7 +96,7 @@
 
 			$result = mysql_query ($query); // execute SQL statement
 			if (!$result) {
-				die ('Insert Row Failed!' . mysql_error());
+				die ('Insert Row Failed at pay info!' . mysql_error());
 			}
 
 			// get the id of the record that has just been inserted
@@ -108,7 +108,7 @@
 
 			$result = mysql_query ($query); // execute SQL statement
 			if (!$result) {
-				die ('Insert Row Failed!' . mysql_error());
+				die ('Insert Row Failed at order info!' . mysql_error());
 			}
 
 			echo "Your order has been processed.<br><br>$$Total has been charged from the account $Card_Number.<br><br>Thank you for your purchase.";

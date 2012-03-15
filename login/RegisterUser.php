@@ -27,7 +27,13 @@ $_SESSION['user'] = $id;
 //echo $Pword;
 echo $_SESSION['user'];
 
-header ('Location:http://people.oregonstate.edu/~muellmax/buhrinc/login/index.php');
+if ($id > -1) {
+	header ('Location: ../index.php');
+}
+else {
+	header('Location: ../login/index.php');
+}
+//header ('Location:http://people.oregonstate.edu/~muellmax/buhrinc/index.php');
 
 //ob_flush();
 ?>

@@ -33,8 +33,10 @@ $insert = mysql_query ("INSERT INTO User (Username, Password, First_Name, Last_N
 
 if (!$insert) echo mysql_error();			 
 			 
-echo "record added.";			 
-
+echo "record added.";
+$result = mysql_query('select LAST_INSERT_ID()');
+$query_row = mysql_fetch_array($result);			 
+$_SESSION['user'] = $query_row[0];
 header ('Location:http://people.oregonstate.edu/~muellmax/buhrinc/regConfirmation.php');
 ob_flush();
 
