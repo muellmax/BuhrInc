@@ -25,4 +25,5 @@ if (isset($_SESSION['user'])) {
 
 
 include '../footer.htm'; 
+mysql_close($mysql_handle);
 ?>
