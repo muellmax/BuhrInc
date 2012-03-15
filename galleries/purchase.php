@@ -7,7 +7,7 @@
 	include '../header.htm';
 	include '../connection.php';
 
-	if (is_null($userid)) {
+	if (is_null($userID)) {
 		echo "Please login before making an order!";
 	}
 	else {
