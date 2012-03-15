@@ -9,6 +9,7 @@
 	
 	if (is_null($userID) || $userID < 0) {
 		echo "Please login before making an order!";
+		include '../footer.htm';
 	}
 	else {
 
@@ -108,4 +109,4 @@
 <input type="submit" name="cmd" value="Insert" />
 </form>
 
-<?php include '../footer.htm';} ?>
+<?php include '../footer.htm'; }?>
