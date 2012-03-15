@@ -39,6 +39,12 @@
 		echo "Missing value: Zip <br>";
 		$errorFound = $errorFound || true; // indicate error
 	}
+	else {
+		if (!preg_match("#^[0-9]{5}$#", $Zip)) {
+			echo "ZipCode '$Zip' is invalid. <br>";
+			$errorFound = $errorFound || true; // indicate error
+		}
+	}
 
 	if( !strlen($Card_Type) ) {
 		echo "Missing value: Card_Type <br>";
@@ -59,6 +65,12 @@
 	if( !strlen($Security_Code) ) {
 		echo "Missing value: Security_Code <br>";
 		$errorFound = $errorFound || true; // indicate error
+	}
+	else {
+		if (!preg_match("#^[0-9]{3}$#", $Security_Code)) {
+			echo "SecurityCode '$Security_Code' is invalid. <br>";
+			$errorFound = $errorFound || true; // indicate error
+		}
 	}
 
 	/*if( $cmd == "Insert" || $cmd == "Update" ) { // other params needed for
