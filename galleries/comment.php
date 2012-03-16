@@ -1,6 +1,6 @@
 <?php
 	$pagetitle = "Comment"; 
-
+	ob_start();
 	session_start();
 	$userID = $_SESSION['user'];
 
@@ -17,7 +17,8 @@
 	else {
 	$sql = "insert into Comments (User_ID, Art_ID, Message, Date_Posted) values (" . $userID . "," . $art_id . ", '" . $comment . "', NOW())";
 	mysql_query ($sql);
-	echo "<br> Your comment has succesfully been uploaded.<br><br>";	
+	header('Location: ../galleries/view.php?art_id=' . $art_id);
+	//echo "<br> Your comment has succesfully been uploaded.<br><br>";	
 	}
 ?>
 
