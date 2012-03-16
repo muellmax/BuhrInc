@@ -1,10 +1,11 @@
 
 <?php
-	$pagetitle = "View Artwork";
+	ob_start();
 	session_start();
+	$pagetitle = "View Artwork";	
 	include '../header.htm';
 	include '../connection.php';
-
+	
 	$user_id = $_SESSION['user'];
 	$art_id = trim ($_GET["art_id"]);
 	
