@@ -8,7 +8,7 @@
 	$result = mysql_query ($query);
 ?>
 
-<p>Check out these galleries. These picture are here until real content is provided by the client. </p>
+<p>Check out various artwork here in the gallery. Click on an image to view it in more detail. </p>
 
 <figure id="gallery">
 	<ul class="gallery">
@@ -18,24 +18,16 @@
 	while ($obj = mysql_fetch_object($result)) {
 		$info = "Name: " . $obj->Name . "\nAuthor: " . $obj->Author . "\nSize: " . $obj->Size;
 
-		if ($obj->For_Sale == 0) { // not for sale
-?>
-		<li><a href=""><img src="<?php print($obj->Link);?>" title="<?php echo $info;?>" /></a>
-			<ul>
-				<li><?php print($obj->Description);?></li>
-			</ul>
-		</li>
-<?php
-		} else { // for sale; click on the image to purchase
+		  // for sale; click on the image to purchase
 			$info = $info . "\nPrice: $" . $obj->Price;
 ?>
-		<li><a href="purchase.php?art_id=<?php print($obj->Art_ID);?>"><img src="<?php print($obj->Link);?>" title="<?php echo $info;?>" /></a>
+		<li><a href="view.php?art_id=<?php print($obj->Art_ID);?>"><img src="<?php print($obj->Link);?>" title="<?php echo $info;?>" /></a>
 			<ul>
-				<li><?php print($obj->Description . "\n(Click to purchase)"); ?></li>
+				<li><?php print($obj->Description); ?></li>
 			</ul>
 		</li>
 <?php
-		}
+		
 	} // end of while
 ?>
 
